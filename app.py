@@ -16,7 +16,7 @@ from sklearn.ensemble import RandomForestClassifier
 # =====================
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/Healthcare-Diabetes.csv")
+    return pd.read_csv("Healthcare-Diabetes.csv")
 
 df = load_data()
 
@@ -136,3 +136,4 @@ elif choice == "Prediction":
 
         st.write("Prediction:", "Diabetic" if prediction == 1 else "Non-Diabetic")
         st.write(f"Confidence: {prob*100:.2f}%")
+
